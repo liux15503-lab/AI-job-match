@@ -1,0 +1,360 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+const resources = {
+  en: {
+    translation: {
+      // Layout
+      "app_name": "AI Job Match",
+      "nav_dashboard": "Dashboard",
+      "nav_jobs": "Jobs",
+      "nav_candidates": "Candidates",
+      "nav_news": "Company News",
+      "nav_resume": "Resume",
+      "nav_applications": "Applications",
+      "nav_learning": "Learning",
+      "nav_training": "AI Training",
+      "nav_community": "Community",
+      "view_as": "View as:",
+      "role_company": "Company",
+      "role_seeker": "Seeker",
+      
+      // Company Home
+      "company_welcome": "Welcome back, TechCorp Inc. Here's what's happening today.",
+      "active_jobs": "Active Jobs",
+      "total_candidates": "Total Candidates",
+      "ai_match_rate": "AI Match Rate",
+      "recent_jobs": "Recent Job Postings",
+      "recent_jobs_desc": "Your latest open positions",
+      "view_all_jobs": "View All Jobs",
+      "ai_recommended": "AI Recommended Candidates",
+      "ai_recommended_desc": "Top matches for your open roles",
+      "view_all_recommendations": "View All Recommendations",
+      "applicants": "applicants",
+      "match": "Match",
+      "matched_for": "Matched for:",
+      "from_last_month": "+2 from last month",
+      "this_week": "+180 this week",
+      "improvement": "+4% improvement",
+
+      // Company Jobs
+      "job_management_desc": "Manage your open positions and track applicants.",
+      "post_new_job": "Post New Job",
+      "active_postings": "Active Postings",
+      "active_postings_desc": "Your currently open roles",
+      "search_jobs": "Search jobs...",
+      "filter": "Filter",
+      "high_matches": "High Matches",
+      "manage": "Manage",
+
+      // Company Candidates
+      "candidate_recommendations": "Candidate Recommendations",
+      "candidate_recommendations_desc": "AI-curated list of top talent for your open roles.",
+      "top_matches": "Top Matches",
+      "top_matches_desc": "Candidates with the highest AI match scores",
+      "search_candidates": "Search candidates by skill or role...",
+      "filter_by_job": "Filter by Job",
+      "resume": "Resume",
+      "contact": "Contact",
+      "shortlist": "Shortlist",
+      "ai_analysis": "AI Analysis",
+      "key_skills": "Key Skills",
+
+      // Company News
+      "news_desc": "Share company updates and AI applications with candidates.",
+      "publish_news": "Publish News",
+      "news_title": "News Title",
+      "news_content": "Content",
+      "news_placeholder": "Share your latest AI initiatives...",
+      "read_more": "Read More",
+      "published_on": "Published on",
+      "seeker_news_desc": "Stay updated with the latest news and AI initiatives from top companies.",
+
+      // Seeker Home
+      "seeker_welcome": "Welcome back, Alex",
+      "seeker_subtitle": "Your AI-powered career hub.",
+      "seeker_hub_desc": "Your AI-powered career hub.",
+      "optimize_resume": "Optimize Resume",
+      "ai_talent_profile": "AI Talent Profile",
+      "ai_talent_profile_desc": "How employers see you based on your resume",
+      "ai_insights": "AI Insights",
+      "ai_insights_desc": "Your profile is highly competitive for Senior Frontend roles. To increase your match rate for emerging AI-driven products, consider improving your 'AI Integration' skills.",
+      "view_courses": "View Recommended Courses",
+      "view_recommended_courses": "View Recommended Courses",
+      "app_status": "Application Status",
+      "application_status": "Application Status",
+      "recent_activity": "Recent activity",
+      "view_all": "View All",
+      "recommended_jobs": "Recommended Jobs",
+      "recommended_jobs_desc": "Based on your AI talent profile",
+      "skill_enhancement": "Skill Enhancement",
+      "skill_enhancement_desc": "Recommended to boost your match rates",
+      "resume_reviewed": "Resume Reviewed",
+      "interview_scheduled": "Interview Scheduled",
+      "applied_days_ago": "Applied 2 days ago",
+      "skill_frontend": "Frontend Dev",
+      "skill_react": "React & Eco",
+      "skill_ui_ux": "UI/UX Design",
+      "skill_ai": "AI Integration",
+      "skill_sys_design": "System Design",
+      "skill_performance": "Performance",
+
+      // Seeker Resume
+      "resume_and_ai_profile": "Resume & AI Profile",
+      "resume_and_ai_profile_desc": "Manage your resume and see how AI interprets your experience.",
+      "upload_pdf": "Upload PDF",
+      "ai_optimize": "AI Optimize",
+      "resume_editor": "Resume Editor",
+      "professional_summary": "Professional Summary",
+      "professional_summary_desc": "A brief overview of your career and goals.",
+      "suggest_improvements": "Suggest Improvements",
+      "experience": "Experience",
+      "experience_desc": "Your work history.",
+      "job_title": "Job Title",
+      "company": "Company",
+      "start_date": "Start Date",
+      "end_date": "End Date",
+      "description": "Description",
+      "add_experience": "Add Experience",
+      "strengths": "Strengths",
+      "areas_for_improvement": "Areas for Improvement",
+      "apply_ai_suggestions": "Apply AI Suggestions",
+
+      // Seeker Learning
+      "learning_desc": "Personalized learning paths to boost your AI match rate.",
+      "recommended_courses": "Recommended Courses",
+      "start_learning": "Start Learning",
+      "practical_projects": "Practical Projects",
+      "practical_projects_desc": "Complete these projects to prove your skills and stand out to employers.",
+      "skills_gained": "Skills Gained",
+      "view_project_details": "View Project Details",
+
+      // Seeker Applications
+      "applications_desc": "Track your job applications and their current status.",
+      "applied": "Applied",
+      "prepare_with_ai": "Prepare with AI",
+
+      // Seeker Training
+      "training_desc": "Practice interviews tailored to your target companies and roles.",
+      "upcoming_interview_prep": "Upcoming Interview Prep: Innovate AI",
+      "upcoming_interview_prep_desc": "Based on the job description and company profile, our AI has generated a custom mock interview. It will focus on React performance, AI API integration, and system design.",
+      "voice_analysis": "Voice Analysis",
+      "expression_tracking": "Expression Tracking",
+      "real_time_feedback": "Real-time Feedback",
+      "start_mock_interview": "Start Mock Interview",
+      "training_modules": "Training Modules",
+      "behavioral_questions": "Behavioral Questions",
+      "practice_star_method": "Practice the STAR method",
+      "behavioral_questions_desc": "Master common behavioral questions like 'Tell me about a time you failed' with AI feedback on your storytelling.",
+      "practice": "Practice",
+      "technical_deep_dive": "Technical Deep Dive",
+      "technical_deep_dive_desc": "Answer technical questions verbally. The AI will evaluate your technical accuracy and clarity of explanation.",
+      "company_specific": "Company Specific",
+      "tailored_to_target_companies": "Tailored to target companies",
+      "company_specific_desc": "Input a company name and job description to generate a highly specific mock interview session.",
+      "configure": "Configure",
+
+      // Seeker Community
+      "community_desc": "Connect with other job seekers, share experiences, and get advice.",
+      "new_post": "New Post",
+      "trending_topics": "Trending Topics",
+      "share_experience": "Share your experience...",
+      "post": "Post",
+      "likes": "Likes",
+      "comments": "Comments",
+      "interview_experience": "Interview Experience",
+      "career_advice": "Career Advice",
+      "resume_review": "Resume Review",
+
+      // AI Chatbot
+      "ai_assistant": "AI Career Assistant",
+      "ai_chat_welcome": "Hi there! I'm your AI Career Assistant. How can I help you with your job search or recruitment today?",
+      "ai_chat_placeholder": "Type your message...",
+      "ai_chat_reply_placeholder": "I am a demo AI assistant. In a real application, I would process your request and provide personalized career advice, resume tips, or candidate matching insights!"
+    }
+  },
+  zh: {
+    translation: {
+      // Layout
+      "app_name": "AI 职配",
+      "nav_dashboard": "控制台",
+      "nav_jobs": "职位管理",
+      "nav_candidates": "候选人",
+      "nav_news": "企业新闻",
+      "nav_resume": "我的简历",
+      "nav_applications": "投递记录",
+      "nav_learning": "技能提升",
+      "nav_training": "AI 面试训练",
+      "nav_community": "求职社区",
+      "view_as": "当前视角:",
+      "role_company": "企业端",
+      "role_seeker": "求职者",
+
+      // Company Home
+      "company_welcome": "欢迎回来，TechCorp Inc。这是今天的动态。",
+      "active_jobs": "招聘中职位",
+      "total_candidates": "候选人总数",
+      "ai_match_rate": "AI 匹配率",
+      "recent_jobs": "最近发布的职位",
+      "recent_jobs_desc": "您最新开放的职位",
+      "view_all_jobs": "查看所有职位",
+      "ai_recommended": "AI 推荐候选人",
+      "ai_recommended_desc": "为您开放职位匹配的最佳人选",
+      "view_all_recommendations": "查看所有推荐",
+      "applicants": "名申请者",
+      "match": "匹配度",
+      "matched_for": "匹配职位：",
+      "from_last_month": "较上月 +2",
+      "this_week": "本周 +180",
+      "improvement": "提升 +4%",
+
+      // Company Jobs
+      "job_management_desc": "管理您的开放职位并追踪申请者。",
+      "post_new_job": "发布新职位",
+      "active_postings": "招聘中职位",
+      "active_postings_desc": "您当前开放的职位",
+      "search_jobs": "搜索职位...",
+      "filter": "筛选",
+      "high_matches": "高匹配",
+      "manage": "管理",
+
+      // Company Candidates
+      "candidate_recommendations": "候选人推荐",
+      "candidate_recommendations_desc": "AI 为您精心挑选的开放职位顶尖人才。",
+      "top_matches": "最佳匹配",
+      "top_matches_desc": "AI 匹配得分最高的候选人",
+      "search_candidates": "按技能或职位搜索候选人...",
+      "filter_by_job": "按职位筛选",
+      "resume": "简历",
+      "contact": "联系",
+      "shortlist": "加入候选",
+      "ai_analysis": "AI 分析",
+      "key_skills": "核心技能",
+
+      // Company News
+      "news_desc": "分享公司动态与 AI 应用，让求职者更了解您。",
+      "publish_news": "发布新闻",
+      "news_title": "新闻标题",
+      "news_content": "内容",
+      "news_placeholder": "分享您最新的 AI 动态...",
+      "read_more": "阅读更多",
+      "published_on": "发布于",
+      "seeker_news_desc": "了解顶尖企业的最新动态和 AI 创新应用。",
+
+      // Seeker Home
+      "seeker_welcome": "欢迎回来，Alex",
+      "seeker_subtitle": "您的 AI 职业发展中心。",
+      "seeker_hub_desc": "您的 AI 职业发展中心。",
+      "optimize_resume": "优化简历",
+      "ai_talent_profile": "AI 人才画像",
+      "ai_talent_profile_desc": "基于您的简历生成的企业视角画像",
+      "ai_insights": "AI 洞察",
+      "ai_insights_desc": "您的个人资料在高级前端职位中极具竞争力。为了提高您在新兴 AI 驱动产品中的匹配率，建议提升“AI 集成”技能。",
+      "view_courses": "查看推荐课程",
+      "view_recommended_courses": "查看推荐课程",
+      "app_status": "求职进展",
+      "application_status": "求职进展",
+      "recent_activity": "最近动态",
+      "view_all": "查看全部",
+      "recommended_jobs": "推荐职位",
+      "recommended_jobs_desc": "基于您的 AI 人才画像推荐",
+      "skill_enhancement": "技能提升",
+      "skill_enhancement_desc": "推荐学习以提升您的匹配率",
+      "resume_reviewed": "简历已评估",
+      "interview_scheduled": "已安排面试",
+      "applied_days_ago": "2天前投递",
+      "skill_frontend": "前端开发",
+      "skill_react": "React生态",
+      "skill_ui_ux": "UI/UX设计",
+      "skill_ai": "AI集成",
+      "skill_sys_design": "系统设计",
+      "skill_performance": "性能优化",
+
+      // Seeker Resume
+      "resume_and_ai_profile": "简历与 AI 画像",
+      "resume_and_ai_profile_desc": "管理您的简历并查看 AI 如何解读您的经验。",
+      "upload_pdf": "上传 PDF",
+      "ai_optimize": "AI 优化",
+      "resume_editor": "简历编辑器",
+      "professional_summary": "个人总结",
+      "professional_summary_desc": "您的职业生涯和目标的简要概述。",
+      "suggest_improvements": "建议改进",
+      "experience": "工作经验",
+      "experience_desc": "您的工作历史。",
+      "job_title": "职位名称",
+      "company": "公司",
+      "start_date": "开始日期",
+      "end_date": "结束日期",
+      "description": "描述",
+      "add_experience": "添加经验",
+      "strengths": "优势",
+      "areas_for_improvement": "待提升领域",
+      "apply_ai_suggestions": "应用 AI 建议",
+
+      // Seeker Learning
+      "learning_desc": "个性化学习路径，提升您的 AI 匹配率。",
+      "recommended_courses": "推荐课程",
+      "start_learning": "开始学习",
+      "practical_projects": "实战项目",
+      "practical_projects_desc": "完成这些项目以证明您的技能并在雇主面前脱颖而出。",
+      "skills_gained": "获得技能",
+      "view_project_details": "查看项目详情",
+
+      // Seeker Applications
+      "applications_desc": "追踪您的求职申请及其当前状态。",
+      "applied": "已投递",
+      "prepare_with_ai": "使用 AI 准备",
+
+      // Seeker Training
+      "training_desc": "针对您的目标公司和职位进行模拟面试。",
+      "upcoming_interview_prep": "即将到来的面试准备：Innovate AI",
+      "upcoming_interview_prep_desc": "基于职位描述和公司简介，我们的 AI 生成了一场定制的模拟面试。重点将放在 React 性能、AI API 集成和系统设计上。",
+      "voice_analysis": "语音分析",
+      "expression_tracking": "表情追踪",
+      "real_time_feedback": "实时反馈",
+      "start_mock_interview": "开始模拟面试",
+      "training_modules": "训练模块",
+      "behavioral_questions": "行为面试题",
+      "practice_star_method": "练习 STAR 法则",
+      "behavioral_questions_desc": "在 AI 的反馈下，掌握常见的行为面试题，例如“告诉我一次你失败的经历”。",
+      "practice": "练习",
+      "technical_deep_dive": "技术深挖",
+      "technical_deep_dive_desc": "口头回答技术问题。AI 将评估您的技术准确性和解释的清晰度。",
+      "company_specific": "公司专属",
+      "tailored_to_target_companies": "为目标公司量身定制",
+      "company_specific_desc": "输入公司名称和职位描述，生成高度具体的模拟面试环节。",
+      "configure": "配置",
+
+      // Seeker Community
+      "community_desc": "与其他求职者交流，分享经验并获取建议。",
+      "new_post": "发布新帖",
+      "trending_topics": "热门话题",
+      "share_experience": "分享你的求职经验...",
+      "post": "发布",
+      "likes": "点赞",
+      "comments": "评论",
+      "interview_experience": "面试经验",
+      "career_advice": "职业建议",
+      "resume_review": "简历互评",
+
+      // AI Chatbot
+      "ai_assistant": "AI 职业助手",
+      "ai_chat_welcome": "你好！我是你的 AI 职业助手。今天在求职或招聘方面有什么我可以帮你的吗？",
+      "ai_chat_placeholder": "输入你的问题...",
+      "ai_chat_reply_placeholder": "我是一个演示 AI 助手。在实际应用中，我会处理您的请求并提供个性化的职业建议、简历优化技巧或候选人匹配洞察！"
+    }
+  }
+};
+
+i18n
+  .use(initReactI18next)
+  .init({
+    resources,
+    lng: "zh", // default language
+    fallbackLng: "en",
+    interpolation: {
+      escapeValue: false
+    }
+  });
+
+export default i18n;
